@@ -3,18 +3,8 @@
 
 namespace c_sharp_study
 {
-    class MainProgram
+    class UserInputClass
     {
-
-        
-        // Main Method
-        public static void Main(String[] args)
-        {
-            // PrintSequentialNumbers();
-            // PrintEvenNumbers();
-            // PrintOddNumbers();
-            CheckPosNeg();
-        }
         
         public static int GetUserInput()
         {
@@ -22,6 +12,24 @@ namespace c_sharp_study
             int number = Convert.ToInt32(Console.ReadLine());
             return number;
         }
+        
+        public static int LinearSearchNumber()
+        {
+            int[] numbers = { 10, 20, 23, 45, 50, 75 };
+            int n = GetUserInput();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == n)
+                {
+                    Console.WriteLine("Number {0} found at position {1}", numbers[i], i);
+                    return 0;
+                }
+            }
+            Console.WriteLine("Number not found.");
+            return 1;
+        }
+        
+        
         
         public static void PrintSequentialNumbers()
         {
