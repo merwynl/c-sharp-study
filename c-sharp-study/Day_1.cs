@@ -28,9 +28,6 @@ namespace c_sharp_study
             Console.WriteLine("Number not found.");
             return 1;
         }
-        
-        
-        
         public static void PrintSequentialNumbers()
         {
             int size = GetUserInput();
