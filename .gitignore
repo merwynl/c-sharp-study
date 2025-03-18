@@ -1,3 +1,7 @@
+# VS & Jetbrains
+*.idea
+*.vs
+
 # Prerequisites
 *.d
 
