@@ -2,11 +2,6 @@ namespace c_sharp_study;
 
 public class exceptions
 {
-    static void Exceptions(string[] args)
-    {
-        StringInterpolation();
-    }
-
     // Example 1: Exceptions - Errors that occur during execution
     //            - Try: Try some code that is considered unsafe
     //            - Except: catches and handles exceptions when they occur 
