@@ -59,6 +59,23 @@ public class loops
         
     }
     
+    // For each loops.
+    static void ForEachLoops(string[] args)
+    {
+        String[] students = { "Ken",  "Adam", "Sara", "Joe" };
+        for (int i = 0; i < students.Length; i++)
+        {
+            Console.WriteLine(students[i]);
+        }
+        
+        // Different way of writing forloops though it's less flexible than a standard for loop
+        // Can't be incremented/decremented upon.
+        foreach (string student in students)
+        {
+            Console.WriteLine(student);
+        }
+    }
+    
     // Number guessing game
     static void NumberGuesser(string[] args)
     {

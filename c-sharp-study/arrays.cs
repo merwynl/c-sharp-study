@@ -1,8 +1,9 @@
 namespace c_sharp_study;
 
+
 public class arrays
 {
-    // Arrays - A variable that can store multiple values.
+    // Example 1: Arrays - A variable that can store multiple values.
     // Has a fixed buffer size. Fixed size can be declared.
     static void Arrays(string[] args)
     {
@@ -20,7 +21,6 @@ public class arrays
         double[] price = new double[4];
         float[] count = new float[4];
         bool[] flag = new bool[4];
-        
         
         // Declaring and assigning elements to an array
         String[] cars = {"Toyota", "Honda", "Nissan"};
@@ -43,21 +43,41 @@ public class arrays
         }
     }
 
-    // For each loops.
-    static void ForEachLoops(string[] args)
+    // Example 2: 2D-arrays|Multi-dimentional arrays- Array within an array.
+    // Useful if you need a grid or array of data
+    static void MultidimentionalArrays(string[] args)
     {
-        String[] students = { "Ken",  "Adam", "Sara", "Joe" };
-        for (int i = 0; i < students.Length; i++)
+        // Declaring 1D arrays
+        String[] nissan = {"skyline", "gt-r", "days"};
+        String[] toyota = {"rav4","camry", "corolla"};
+        String[] honda =  {"cr-v", "civic", "accord"};
+
+        // Declaring a 2d array
+        String[,] parking_lot =
         {
-            Console.WriteLine(students[i]);
+            {"skyline", "gt-r", "days"},
+            {"rav4","camry", "corolla"},
+            {"cr-v", "civic", "accord"}
+        };
+
+        // Changing an element in a 2D array. array[column, row]
+        parking_lot[1, 2] = "yaris";
+        parking_lot[2, 2] = "jazz";
+
+        // Iterates through each element within a 2D array
+        foreach (string car in parking_lot)
+        {
+            Console.WriteLine(car);
         }
         
-        // Different way of writing forloops though it's less flexible than a standard for loop
-        // Can't be incremented/decremented upon.
-        foreach (string student in students)
+        // Using nested for loops to display a 2d array
+        for (int i = 0; i < parking_lot.GetLength(0); i++)
         {
-            Console.WriteLine(student);
+            for (int j = 0; j < parking_lot.GetLength(1); j++)
+            {
+                Console.Write(parking_lot[i, j] + " ");
+            }
+            Console.WriteLine();
         }
     }
-    
 }
