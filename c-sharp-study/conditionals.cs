@@ -1,6 +1,6 @@
 namespace c_sharp_study;
 
-public class Conditionals
+public class conditionals
 {
     // Conditional If statements
     static void IfStatements(string[] args)

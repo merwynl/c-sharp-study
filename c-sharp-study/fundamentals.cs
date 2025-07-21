@@ -2,7 +2,7 @@ using System;
 
 namespace c_sharp_study;
 
-class Fundamentals
+class fundamentals
 {
     // C# needs a main function for a project to run. Only one main function can exist in any given project  
     static void Base(string[] args)
