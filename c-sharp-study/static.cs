@@ -8,27 +8,27 @@ class staticModifiers
      */
     static void StaticModifiers(string[] args)
     {
-        Car car1 = new Car("Toyota");
-        Car car2 = new Car("Lexus");
-        Car car3 = new Car("Hyundai");
+        Cars car1 = new Cars("Toyota");
+        Cars car2 = new Cars("Lexus");
+        Cars car3 = new Cars("Hyundai");
         
         // Accessing a public non-static field.
         Console.WriteLine(car1.model);
         
         // car1.numberofCars; can no longer be accessed from the object itself because numberofCars is static.  
-        Console.WriteLine(Car.numberofCars);
+        Console.WriteLine(Cars.numberofCars);
         
         // Invoking a public method
-        Car.StartRace();
+        Cars.StartRace();
     }
 }
 
-class Car
+class Cars
 {
     public String model;
     public static int numberofCars;
     // Creating a constructor
-    public Car(String model)
+    public Cars (String model)
     {
         this.model = model;
         numberofCars ++; // Each time an object is instantiated, we increment by 1.

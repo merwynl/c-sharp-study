@@ -4,7 +4,7 @@ public class abstractclass
 {
     /* Abstract class - Modifier that indicates missing components or incomplete implementation
     */
-    static void Main(string[] args)
+    static void AbstractClasses(string[] args)
     {
         Train train = new Train();
         Boat boat = new Boat();
