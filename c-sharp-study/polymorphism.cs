@@ -9,7 +9,7 @@ public class polymorphism
        Ex. A dog can be a: canine, animal, organism 
      * 
      */
-    static void Main(string[] args)
+    static void Polymorphism(string[] args)
     {
         Car car = new Car();
         Bicycle bicycle = new Bicycle();
