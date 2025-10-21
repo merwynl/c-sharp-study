@@ -34,7 +34,8 @@ public class conditionals
         int time = Convert.ToInt32(Console.ReadLine());
         if (time >= 19)
         {
-            Console.WriteLine("Reserved seating has been sold out. You may purchase tickets for general standing admission tickets.");
+            Console.WriteLine(
+                "Reserved seating has been sold out. You may purchase tickets for general standing admission tickets.");
         }
         else if (time <= 0)
         {
@@ -89,37 +90,38 @@ public class conditionals
                 Console.WriteLine("Inside else!");
             }
         }
-        
+
         // Using the is not or ! logical operator
         if (!isPlayer)
         {
             Console.WriteLine("Oops!");
         }
-        
+
         // && And logical operator
         if (age > 15 && age < 25)
         {
-            Console.WriteLine("Inside If!");        
+            Console.WriteLine("Inside If!");
         }
-        
-       // || Or logical operator
-       if (age > 15 || age < 25)
-       {
-           Console.WriteLine("Inside If!");
-       }
-       
-       // Chaining multiple logical operators
-       bool isPlayer2 = false;
-       if (false || false)
-       {
-           Console.WriteLine("Inside if!");
-       }
 
-       // If statements evaluate from left to write, parenthesis first.
-       if ((1 < 2 ) && (5 > 1))
-       {
-           Console.WriteLine("Inside if!");
-       }
+        // || Or logical operator
+        if (age > 15 || age < 25)
+        {
+            Console.WriteLine("Inside If!");
+        }
+
+        // Chaining multiple logical operators
+        bool isPlayer2 = false;
+        if (false || false)
+        {
+            Console.WriteLine("Inside if!");
+        }
+
+        // If statements evaluate from left to write, parenthesis first.
+        if ((1 < 2) && (5 > 1))
+        {
+            Console.WriteLine("Inside if!");
+        }
+
         // Shorthand if statement for checking bool values
         bool forSale = false;
         if (forSale)

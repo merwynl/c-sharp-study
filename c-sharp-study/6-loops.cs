@@ -4,14 +4,14 @@ public class loops
 {
     // While loops - While a condition is true/false do something
     static void WhileLoops(string[] args)
-    { 
-        string name = ""; 
+    {
+        string name = "";
         while (name == "")
         {
-            Console.WriteLine("Enter your name: ");  
-            name = Console.ReadLine(); 
+            Console.WriteLine("Enter your name: ");
+            name = Console.ReadLine();
         }
-        
+
         Console.WriteLine(String.Format("Hello {0}!", name));
     }
 
@@ -23,14 +23,14 @@ public class loops
         {
             result = i += 1;
             Console.WriteLine(result);
-        }while (i<j);
+        } while (i < j);
     }
-    
+
     // For Loops
     static void ForLoops(string[] args)
     {
         // For loops in c# require a counter, a condition and an increment
-        for (int i = 0; i < 21; i+=4)
+        for (int i = 0; i < 21; i += 4)
         {
             Console.WriteLine(i);
         }
@@ -41,33 +41,34 @@ public class loops
     {
         Console.Write("How many rows? ");
         int rows = Convert.ToInt32(Console.ReadLine());
-        
+
         Console.Write("How many columns? ");
         int columns = Convert.ToInt32(Console.ReadLine());
-        
+
         Console.Write("What symbol or char? ");
         string symbol = Console.ReadLine();
-        
+
         for (int i = 0; i <= rows; i++)
         {
             for (int j = 0; j <= columns; j++)
             {
                 Console.Write(symbol);
             }
+
             Console.WriteLine();
         }
-        
+
     }
-    
+
     // For each loops.
     static void ForEachLoops(string[] args)
     {
-        String[] students = { "Ken",  "Adam", "Sara", "Joe" };
+        String[] students = { "Ken", "Adam", "Sara", "Joe" };
         for (int i = 0; i < students.Length; i++)
         {
             Console.WriteLine(students[i]);
         }
-        
+
         // Different way of writing forloops though it's less flexible than a standard for loop
         // Can't be incremented/decremented upon.
         foreach (string student in students)
@@ -75,7 +76,7 @@ public class loops
             Console.WriteLine(student);
         }
     }
-    
+
     // Number guessing game
     static void NumberGuesser(string[] args)
     {
@@ -87,7 +88,7 @@ public class loops
         int number;
         int guessCount;
         string response;
-        
+
         Console.WriteLine("Welcome to Number Guesser!");
 
         while (playAgain)
@@ -98,7 +99,7 @@ public class loops
             response = "";
             while (guess != number)
             {
-                Console.Write("Select a number between {0} and {1}: ", min,max);
+                Console.Write("Select a number between {0} and {1}: ", min, max);
                 guess = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Guess: " + guess);
 
@@ -110,11 +111,13 @@ public class loops
                 {
                     Console.WriteLine("Too low! Try again!");
                 }
+
                 guessCount++;
             }
-            Console.WriteLine("Congrats! The answer is {0}!", number);  
+
+            Console.WriteLine("Congrats! The answer is {0}!", number);
             Console.WriteLine("Number of guesses: {0}", guessCount);
-            
+
             Console.WriteLine("Would you like to play again? (y/n): ");
             response = Console.ReadLine();
             response = response.ToUpper();
@@ -127,10 +130,10 @@ public class loops
                 playAgain = false;
             }
         }
-        
+
         Console.WriteLine("Thanks for playing! Press any key to exit...");
     }
-    
+
     // Rock-paper scissors
     static void RockPaperScissors(string[] args)
     {
@@ -139,14 +142,14 @@ public class loops
         string player;
         string computer;
         string response;
-        
+
         while (playAgain)
         {
             player = "";
             computer = "";
             response = "";
-            
-            while(player != "ROCK" && player != "PAPER" && player != "SCISSORS")
+
+            while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")
             {
                 Console.Write("Enter ROCK, PAPER or SCISSORS: ");
                 player = Console.ReadLine();
@@ -164,8 +167,8 @@ public class loops
                 case 3:
                     computer = "SCISSORS";
                     break;
-            }      
-            
+            }
+
             Console.WriteLine("Player: {0}", player);
             Console.WriteLine("Computer: {0}", computer);
 
@@ -174,7 +177,7 @@ public class loops
                 case "ROCK":
                     if (computer == "ROCK")
                     {
-                       Console.WriteLine("It's a draw!"); 
+                        Console.WriteLine("It's a draw!");
                     }
                     else if (computer == "PAPER")
                     {
@@ -184,11 +187,12 @@ public class loops
                     {
                         Console.WriteLine("You win!");
                     }
+
                     break;
                 case "PAPER":
                     if (computer == "ROCK")
                     {
-                        Console.WriteLine("You win!"); 
+                        Console.WriteLine("You win!");
                     }
                     else if (computer == "PAPER")
                     {
@@ -198,11 +202,12 @@ public class loops
                     {
                         Console.WriteLine("You lose!");
                     }
+
                     break;
                 case "SCISSORS":
                     if (computer == "ROCK")
                     {
-                        Console.WriteLine("You lose!"); 
+                        Console.WriteLine("You lose!");
                     }
                     else if (computer == "PAPER")
                     {
@@ -212,8 +217,10 @@ public class loops
                     {
                         Console.WriteLine("It's a draw!");
                     }
+
                     break;
             }
+
             Console.WriteLine("Would you like to play again? (y/n): ");
             response = Console.ReadLine();
             response = response.ToUpper();
@@ -226,6 +233,7 @@ public class loops
                 playAgain = false;
             }
         }
+
         Console.WriteLine("Thanks for playing!");
     }
 
@@ -237,17 +245,17 @@ public class loops
             double num2 = 0;
             string symbol;
             double result = 0;
-        
+
             Console.WriteLine("------------------------------");
             Console.WriteLine("Welcome to Codebox Calculator!");
             Console.WriteLine("------------------------------");
-       
+
             Console.Write("Enter the first number: ");
             num1 = Convert.ToDouble(Console.ReadLine());
-       
+
             Console.Write("Enter the second number: ");
             num2 = Convert.ToDouble(Console.ReadLine());
-       
+
             Console.WriteLine("Please select an operator: ");
             Console.WriteLine("\t+: Addition");
             Console.WriteLine("\t-: Subtraction");
@@ -280,9 +288,11 @@ public class loops
                 default:
                     Console.WriteLine("That is not a valid option!");
                     break;
-            } 
-            Console.WriteLine("Would you like to continue? (y/n): ");  
+            }
+
+            Console.WriteLine("Would you like to continue? (y/n): ");
         } while (Console.ReadLine().ToUpper() == "Y");
-        Console.WriteLine("Thank you! Have a nice day!");  
+
+        Console.WriteLine("Thank you! Have a nice day!");
     }
 }
