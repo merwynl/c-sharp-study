@@ -14,6 +14,9 @@ public class lists
         // Declaring a list
         List<string> foods = new List<string>();
         
+        // Unlike arrays, lists don't require a specified fixed size when being declared
+        List<int> numbersList = new List<int>(); 
+        
         // Adding elements to a list
         foods.Add("ramen");
         foods.Add("pizza");
@@ -23,7 +26,7 @@ public class lists
         // Printing a specific element inside a list
         Console.WriteLine(foods[1]);
         
-        // Printing the number of elements inside a list
+        // Counting the number of elements inside a list
         Console.WriteLine(foods.Count);
         
         // Removes an elements from a list

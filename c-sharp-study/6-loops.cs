@@ -30,7 +30,7 @@ public class loops
     static void ForLoops(string[] args)
     {
         // For loops in c# require a counter, a condition and an increment
-        for (int i = 1; i < 21; i+=4)
+        for (int i = 0; i < 21; i+=4)
         {
             Console.WriteLine(i);
         }

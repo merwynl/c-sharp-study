@@ -1,6 +1,5 @@
 namespace c_sharp_study;
 
-
 public class arrays
 {
     // Example 1: Arrays - A variable that can store multiple values.
@@ -8,7 +7,7 @@ public class arrays
     static void Arrays(string[] args)
     {
         // Declaring an array with a fixed size
-        String[] students = new string[4];
+        string[] students = new string[4];
         
         // Populating an array with elements
         students[0] = "Ken";
@@ -22,7 +21,10 @@ public class arrays
         float[] count = new float[4];
         bool[] flag = new bool[4];
         
-        // Declaring and assigning elements to an array
+        // Alternative method of declaring an array explicitly assigning values to it
+        int[] numbers = new int[] { 23, 23, 54, 64, 13 };
+
+        // Declaring and assigning elements to an array. If no values are assigned to the array, a size must be defined
         String[] cars = {"Toyota", "Honda", "Nissan"};
         int[] scores = { 3, 4, 5, 6 };
         bool[] flags = {true,false,false,true};
@@ -33,17 +35,17 @@ public class arrays
         // Printing a specific array element
         Console.WriteLine(cars[0]);
         
-        // Printing the length of an array
-        Console.WriteLine(cars.Length);
+        // Printing the length or size of an array
+        Console.WriteLine(scores.Length);
         
         // Using a for loop to iterate and print each element in an array
-        for (int i = 0; i < cars.Length; i++)
+        for (int i = 0; i < flags.Length; i++)
         {
-            Console.WriteLine(cars[i]);
+            Console.WriteLine(numbers[i]);
         }
     }
 
-    // Example 2: 2D-arrays|Multi-dimentional arrays- Array within an array.
+    // Example 2: 2D-arrays|Multi-dimentional arrays are arrays within an array.
     // Useful if you need a grid or array of data
     static void MultidimentionalArrays(string[] args)
     {
@@ -53,7 +55,7 @@ public class arrays
         String[] honda =  {"cr-v", "civic", "accord"};
 
         // Declaring a 2d array
-        String[,] parking_lot =
+        String[,] parkingLot =
         {
             {"skyline", "gt-r", "days"},
             {"rav4","camry", "corolla"},
@@ -61,21 +63,21 @@ public class arrays
         };
 
         // Changing an element in a 2D array. array[column, row]
-        parking_lot[1, 2] = "yaris";
-        parking_lot[2, 2] = "jazz";
+        parkingLot[1, 2] = "yaris";
+        parkingLot[2, 2] = "jazz";
 
         // Iterates through each element within a 2D array
-        foreach (string car in parking_lot)
+        foreach (string car in parkingLot)
         {
             Console.WriteLine(car);
         }
         
         // Using nested for loops to display a 2d array
-        for (int i = 0; i < parking_lot.GetLength(0); i++)
+        for (int i = 0; i < parkingLot.GetLength(0); i++)
         {
-            for (int j = 0; j < parking_lot.GetLength(1); j++)
+            for (int j = 0; j < parkingLot.GetLength(1); j++)
             {
-                Console.Write(parking_lot[i, j] + " ");
+                Console.Write(parkingLot[i, j] + " ");
             }
             Console.WriteLine();
         }

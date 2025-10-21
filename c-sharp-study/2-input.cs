@@ -21,11 +21,11 @@ public class InputArithmetics
     {
         int x = 1;
 
-        // Shorthand addition. x = x + 1. 2nd method often found in loops.
+        // Shorthand addition or increment. x = x + 1. 2nd method often found in loops.
         x += 1;
         x++; 
 
-        // Shorthand subtraction. x = x - 1.
+        // Shorthand subtraction or decrement. x = x - 1.
         x -= 1;
         x--;
 

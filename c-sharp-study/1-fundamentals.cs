@@ -29,7 +29,7 @@ class fundamentals
         Console.WriteLine("Welcome to \nCodebox!");
         
         // Variables in C# takes two steps. 1. Declaration 2. Initialization
-        // Declaring variables
+        // Declaring variables. Case sensitive.
         int x;
         bool guessed;
         x = 123;
@@ -41,13 +41,14 @@ class fundamentals
         // C# Data types
         int a = 1; // whole integer numbers
         float b = 2.5f; // floating numbers
-        double c = 5.3; // Larger than a float. Typically 8 bytes. 
+        double c = 5.3; // Larger than a float. Typically, 8 bytes. 
         decimal d = 3; //decimalNumber
         bool boole = true; // boolean. True or False
         string str = "String"; // string characters in double quotes
         short shortNumber = 1; // For ints smaller than 4 bytes
         long longNumber = 2345; // Ints larger than 4 bytes
         char character = '@'; // Single characters in single quotes
+        
         
         // Printing variables
         Console.WriteLine(str);
@@ -57,7 +58,6 @@ class fundamentals
         
         // Concatenating strings and characters
         Console.WriteLine( str + character);
-        
         
         /*
          * Constants = Immutable values known at compile time
@@ -87,6 +87,18 @@ class fundamentals
         
         // Getting the data type of incoming variable.
         Console.WriteLine(reply.GetType());
+        
+        // Inserts a single quote inside a string
+        string message = "It\'s all right!";
+        
+        // String formatting to include quotations inside of strings
+        string myString = "\"Code Monkey\"";
+        
+        // Inserts a single backslash
+        string backslash = "This \\  is single backslash";
+        
+        // Inserts a double backslash
+        string doubleBackslash = "This \\\\ a double backslash!";
         
         // Keeps program running until key is entered.
         Console.ReadKey();

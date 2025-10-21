@@ -8,7 +8,7 @@ public class multithreading
      *        - Can use multiple threads to perform different tasks concurrently
      *        - Current running thread in "main" thread
      */
-    static void Main(string[] args)
+    static void Multithreading(string[] args)
     {
         Thread mainThread = Thread.CurrentThread;
         mainThread.Name = "Main Thread";
