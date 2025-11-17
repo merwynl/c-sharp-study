@@ -1,7 +1,24 @@
+# Unity
+*[Ll]ibrary/
+*[Tt]emp/
+*[Oo]bj/
+*[Bb]uild/
+*[Bb]uilds/
+*[Ll]ogs/
+*[Uu]serSettings/
+*Assets/AssetStoreTools*
+*ProjectSettings/Packages/*/Settings.json
+*SaveData*.dat
+**/ReferenceBackgrounds/*.png*
+*[Aa]ssets/BuildReports*
+*[Pp]rojectSettings/BuildReportToolOptions.xml
+*.apk
+*.unitypackage
+*.unitypackage.meta
+
 # Binearies & debug
 *obj
 *bin
-
 
 # VS & Jetbrains
 *.idea
